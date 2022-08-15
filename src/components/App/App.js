@@ -66,7 +66,7 @@ function App() {
 //     flex-direction: column;
 // `;
 
-const Main = styled.div`
+const Main = styled.main`
     display: flex;
     flex-direction: column;
     margin-top: 60px;
