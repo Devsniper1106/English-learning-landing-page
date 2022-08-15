@@ -9,9 +9,9 @@ const Button = ({ children, variant }) => {
             : "var(--color-darkest-blue)";
 
     return (
-        <Wrapper id="label" style={{ "--bgColor": bgColor }}>
+        <Wrapper style={{ "--bgColor": bgColor }}>
             {children}
-            <Overlay aria-labelledby="label" />
+            <Overlay>{children}</Overlay>
         </Wrapper>
     );
 };
@@ -38,6 +38,7 @@ const Overlay = styled.button`
     width: 100%;
     pointer-events: inherit;
     cursor: pointer;
+    color: transparent;
 
     &:hover {
         opacity: 0.3;
