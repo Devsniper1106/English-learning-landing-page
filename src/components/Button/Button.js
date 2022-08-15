@@ -9,9 +9,9 @@ const Button = ({ children, variant }) => {
             : "var(--color-darkest-blue)";
 
     return (
-        <Wrapper style={{ "--bgColor": bgColor }}>
+        <Wrapper id="label" style={{ "--bgColor": bgColor }}>
             {children}
-            <Overlay />
+            <Overlay aria-labelledby="label" />
         </Wrapper>
     );
 };
