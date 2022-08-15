@@ -8,7 +8,9 @@ import Header from "../Header";
 function App() {
     return (
         <Wrapper>
-            <Header />
+            <HeaderWrapper>
+                <Header />
+            </HeaderWrapper>
             <Main>
                 <Hero>
                     <HeroCaption>
@@ -48,8 +50,13 @@ function App() {
     );
 }
 
+const HeaderWrapper = styled.div`
+    z-index: 2;
+`;
+
 const Wrapper = styled.div`
-    overflow: hidden;
+    /* overflow: hidden; */
+    overflow-x: hidden;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -90,7 +97,8 @@ const TitleCard = styled.div`
 const Hero = styled.div`
     padding: 0 var(--min-pad);
     max-width: calc(var(--max-width) + var(--min-pad) * 2);
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
 
     @media (max-width: 653px) {
@@ -156,6 +164,7 @@ const Description = styled.p`
 
 const CategoryWrapper = styled.div`
     background: linear-gradient(180deg, #ffffff 0%, #f0f1ff 100%);
+    flex-grow: 1;
 `;
 
 const Categories = styled.div`
