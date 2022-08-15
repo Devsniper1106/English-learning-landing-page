@@ -50,12 +50,16 @@ function App() {
 
 const Wrapper = styled.div`
     overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 `;
+
 const Main = styled.div`
     display: flex;
     flex-direction: column;
     margin-top: 60px;
-
+    flex-grow: 1;
     @media (max-width: 653px) {
         margin-top: 10px;
     }
