@@ -115,20 +115,23 @@ const TitleCard = styled.div`
 `;
 
 const Hero = styled.div`
+    position: relative;
     padding: 0 var(--min-pad);
-    max-width: calc(var(--max-width) + var(--min-pad) * 2);
+    width: calc(var(--max-width) + var(--min-pad) * 2);
     margin-left: auto;
     margin-right: auto;
     display: flex;
-
     @media (max-width: 653px) {
         flex-direction: column;
     }
 `;
 
 const HeroImage = styled.img`
-    max-width: 50%;
-    transform: scale(1.8) translate(calc(35% - 3vw), -12%);
+    width: 80%;
+    position: absolute;
+    top: -100%;
+    right: -35%;
+    /* transform: scale(1.8) translate(calc(35%)); */
     object-fit: contain;
 
     @media (max-width: 653px) {
