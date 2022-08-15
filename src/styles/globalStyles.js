@@ -23,6 +23,7 @@ code {
         monospace;
 }
 
+
 html{
 	--color-orange: hsl(13, 100%, 64%, 1);
 	--color-pink: hsl(322, 87%, 55%, 1);
@@ -49,6 +50,11 @@ html{
 	}
 }
 
+#root {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
 
 `;
 

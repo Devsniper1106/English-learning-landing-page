@@ -7,10 +7,8 @@ import Header from "../Header";
 
 function App() {
     return (
-        <Wrapper>
-            <HeaderWrapper>
-                <Header />
-            </HeaderWrapper>
+        <>
+            <Header />
             <Main>
                 <Hero>
                     <HeroCaption>
@@ -22,8 +20,14 @@ function App() {
                         </Description>
                         <Button variant="primary">Get Started</Button>
                     </HeroCaption>
-                    <HeroImage src="/assets/images/image-hero-desktop.png" />
-                    <HeroImageMobile src="/assets/images/image-hero-mobile.png" />
+                    <HeroImage
+                        alt="Hero Image Desktop"
+                        src="/assets/images/image-hero-desktop.png"
+                    />
+                    <HeroImageMobile
+                        alt="Hero Image Mobile"
+                        src="/assets/images/image-hero-mobile.png"
+                    />
                 </Hero>
 
                 <CategoryWrapper>
@@ -46,21 +50,21 @@ function App() {
                 </CategoryWrapper>
             </Main>
             <Footer />
-        </Wrapper>
+        </>
     );
 }
 
-const HeaderWrapper = styled.div`
-    z-index: 2;
-`;
+// const HeaderWrapper = styled.div`
+//     z-index: 2;
+// `;
 
-const Wrapper = styled.div`
-    /* overflow: hidden; */
-    overflow-x: hidden;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-`;
+// const Wrapper = styled.div`
+//     overflow: hidden;
+//     overflow-x: hidden;
+//     height: 100%;
+//     display: flex;
+//     flex-direction: column;
+// `;
 
 const Main = styled.div`
     display: flex;
@@ -70,6 +74,7 @@ const Main = styled.div`
     @media (max-width: 653px) {
         margin-top: 10px;
     }
+    /* overflow-x: hidden; */
 `;
 
 const TitleCard = styled.div`

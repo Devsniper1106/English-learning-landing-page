@@ -70,7 +70,7 @@ h6 {
 #root,
 #__next {
     isolation: isolate;
-	height: 100%;
+
 }
 
 ul {
