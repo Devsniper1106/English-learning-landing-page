@@ -189,6 +189,7 @@ const CategoryWrapper = styled.div`
     flex-direction: column;
     align-items: center;
     padding-bottom: 16px;
+    max-width: 100%;
 `;
 
 const Categories = styled.div`
@@ -197,7 +198,7 @@ const Categories = styled.div`
     flex-wrap: wrap;
     /* gap: 56px 30px; */
     padding: 140px var(--min-pad);
-    max-width: calc(var(--max-width) + var(--min-pad) * 2);
+    max-width: min(100%, calc(var(--max-width) + var(--min-pad) * 2));
     margin: auto;
     gap: 64px 30px;
 
