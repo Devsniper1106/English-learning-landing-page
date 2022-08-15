@@ -47,6 +47,17 @@ function App() {
                             );
                         })}
                     </Categories>
+                    <Attribution>
+                        Challenge by{" "}
+                        <a href="https://www.frontendmentor.io/">
+                            Frontend Mentor
+                        </a>
+                        . Coded by{" "}
+                        <a href="https://github.com/BhandarkarPawan">
+                            Pawan Bhandarkar
+                        </a>
+                        .
+                    </Attribution>
                 </CategoryWrapper>
             </Main>
             <Footer />
@@ -75,6 +86,11 @@ const Main = styled.main`
         margin-top: 10px;
     }
     /* overflow-x: hidden; */
+`;
+
+const Attribution = styled.p`
+    margin-top: auto;
+    background-color: transparent;
 `;
 
 const TitleCard = styled.div`
@@ -170,6 +186,10 @@ const Description = styled.p`
 const CategoryWrapper = styled.div`
     background: linear-gradient(180deg, #ffffff 0%, #f0f1ff 100%);
     flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 16px;
 `;
 
 const Categories = styled.div`
