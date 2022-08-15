@@ -16,7 +16,7 @@ const Button = ({ children, variant }) => {
     );
 };
 
-const Wrapper = styled.button`
+const Wrapper = styled.div`
     border-radius: 5000px;
     background: var(--bgColor);
     border: none;
@@ -28,7 +28,7 @@ const Wrapper = styled.button`
     overflow: hidden;
 `;
 
-const Overlay = styled.div`
+const Overlay = styled.button`
     background-color: white;
     position: absolute;
     top: 0;
