@@ -16,7 +16,7 @@ const Wrapper = styled.button`
     background: var(--bgColor);
     border: none;
     color: var(--color-white);
-    padding: 8px 32px;
+    padding: 8px 24px;
     font-weight: 700;
     line-height: 28px;
 `;

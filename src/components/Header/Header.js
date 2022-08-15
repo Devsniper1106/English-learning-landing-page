@@ -18,10 +18,12 @@ const Logo = styled.img`
 
 const Wrapper = styled.header`
     display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
     width: 100%;
     justify-content: space-between;
-    padding: 24px 0;
-    max-width: var(--max-width);
+    padding: 24px var(--min-pad);
+    max-width: calc(var(--max-width) + var(--min-pad) * 2);
     margin: auto;
 `;
 

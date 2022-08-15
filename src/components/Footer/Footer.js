@@ -22,9 +22,11 @@ const Content = styled.div`
     display: flex;
     width: 100%;
     justify-content: space-between;
-    padding: 32px 0;
-    max-width: var(--max-width);
+    padding: 32px var(--min-pad);
+    max-width: calc(var(--max-width) + var(--min-pad) * 2);
     margin: auto;
+    flex-wrap: wrap;
+    gap: 16px;
 `;
 
 const Wrapper = styled.footer`

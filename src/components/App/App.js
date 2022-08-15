@@ -7,7 +7,7 @@ import Header from "../Header";
 
 function App() {
     return (
-        <>
+        <Wrapper>
             <Header />
             <Main>
                 <Hero>
@@ -21,6 +21,7 @@ function App() {
                         <Button variant="primary">Get Started</Button>
                     </HeroCaption>
                     <HeroImage src="/assets/images/image-hero-desktop.png" />
+                    <HeroImageMobile src="/assets/images/image-hero-mobile.png" />
                 </Hero>
 
                 <CategoryWrapper>
@@ -43,13 +44,21 @@ function App() {
                 </CategoryWrapper>
             </Main>
             <Footer />
-        </>
+        </Wrapper>
     );
 }
 
+const Wrapper = styled.div`
+    overflow: hidden;
+`;
 const Main = styled.div`
     display: flex;
     flex-direction: column;
+    margin-top: 60px;
+
+    @media (max-width: 653px) {
+        margin-top: 10px;
+    }
 `;
 
 const TitleCard = styled.div`
@@ -59,18 +68,48 @@ const TitleCard = styled.div`
     line-height: 40px;
     font-weight: 800;
     color: white;
-    max-width: 350px;
     padding: 64px 32px;
+
+    /* @media (max-width: 768px) {
+      
+    } */
+
+    @media (max-width: 621px) {
+        font-size: 24px;
+        line-height: 32px;
+        padding: 28px;
+        padding-top: 24px;
+        padding-bottom: 32px;
+    }
 `;
 
 const Hero = styled.div`
-    display: flex;
-    max-width: var(--max-width);
+    padding: 0 var(--min-pad);
+    max-width: calc(var(--max-width) + var(--min-pad) * 2);
     margin: auto;
+    display: flex;
+
+    @media (max-width: 653px) {
+        flex-direction: column;
+    }
 `;
 
 const HeroImage = styled.img`
-    width: 50%;
+    max-width: 50%;
+    transform: scale(1.8) translate(calc(35% - 3vw), -12%);
+    object-fit: contain;
+
+    @media (max-width: 653px) {
+        display: none;
+    }
+`;
+
+const HeroImageMobile = styled.img`
+    display: none;
+
+    @media (max-width: 653px) {
+        display: block;
+    }
 `;
 
 const HeroCaption = styled.div`
@@ -78,32 +117,58 @@ const HeroCaption = styled.div`
     flex-direction: column;
     align-items: start;
     justify-content: center;
+    max-width: 500px;
+
+    @media (max-width: 653px) {
+        max-width: none;
+    }
 `;
 
 const Title = styled.h1`
     font-weight: 800;
-    font-size: calc(1rem * (56 / 18));
-    line-height: calc(1rem * (70 / 18));
+    font-size: calc(1rem * (56 / 16));
+    line-height: calc(1rem * (70 / 16));
     margin-bottom: 30px;
+
+    @media (max-width: 768px) {
+        font-size: calc(1rem * (40 / 16));
+        line-height: calc(1rem * (50.4 / 16));
+        margin-bottom: 25px;
+    }
 `;
 
 const Description = styled.p`
     font-weight: 500;
     color: var(--color-lightest-blue);
     margin-bottom: 40px;
+    line-height: calc(1rem * (28 / 16));
+
+    @media (max-width: 768px) {
+        font-size: calc(1rem * (16 / 16));
+        line-height: calc(1rem * (26 / 16));
+        margin-bottom: 24px;
+    }
 `;
 
 const CategoryWrapper = styled.div`
     background: linear-gradient(180deg, #ffffff 0%, #f0f1ff 100%);
-    padding-bottom: 140px;
 `;
 
 const Categories = styled.div`
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     flex-wrap: wrap;
-    gap: 56px 30px;
-    max-width: var(--max-width);
+    /* gap: 56px 30px; */
+    padding: 140px var(--min-pad);
+    max-width: calc(var(--max-width) + var(--min-pad) * 2);
     margin: auto;
+    gap: 64px 30px;
+
+    @media (max-width: 653px) {
+        padding-top: 0px;
+        padding-bottom: 86px;
+        gap: 40px;
+    }
 `;
 
 export default App;

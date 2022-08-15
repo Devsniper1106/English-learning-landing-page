@@ -23,7 +23,6 @@ const Card = ({ title, icon, description, link }) => {
 };
 
 const Wrapper = styled.div`
-    max-width: 350px;
     display: flex;
     flex-direction: column;
     gap: 24px;
@@ -32,7 +31,13 @@ const Wrapper = styled.div`
     box-shadow: 0px 25px 50px rgba(6, 22, 141, 0.0442381);
     border-radius: 15px;
     background-color: var(--color-white);
-    width: 350px;
+
+    @media (max-width: 768px) {
+        padding: 28px;
+        padding-top: 0px;
+        padding-bottom: 32px;
+        gap: 16px;
+    }
 `;
 
 const Icon = styled.img`
@@ -43,21 +48,32 @@ const Icon = styled.img`
 
 const Title = styled.h2`
     font-weight: 800;
-    font-size: calc(1rem * (24 / 18));
-    line-height: calc(1rem * (30 / 18));
+    font-size: calc(1rem * (24 / 16));
+    line-height: calc(1rem * (30 / 16));
+
+    @media (max-width: 768px) {
+        font-size: calc(1rem * (20 / 16));
+        line-height: calc(1rem * (25 / 16));
+    }
 `;
 
 const Description = styled.p`
     font-weight: 500;
-    line-height: calc(1rem * (28 / 18));
+    line-height: calc(1rem * (28 / 16));
     color: var(--color-lightest-blue);
+
+    @media (max-width: 768px) {
+        font-size: calc(1rem * (16 / 16));
+        line-height: calc(1rem * (26 / 16));
+    }
 `;
 
 const Link = styled.a`
     color: var(--color-deeppink);
     font-weight: 700;
-    line-height: calc(1rem * (28 / 18));
+    line-height: calc(1rem * (28 / 16));
     text-decoration: none;
+    margin-top: auto;
 `;
 
 export default Card;

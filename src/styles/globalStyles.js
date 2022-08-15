@@ -39,7 +39,14 @@ html{
 	--secondary-gradient: linear-gradient(180deg, var(--color-deep-blue) -54.32%, var(--color-pink) 100%);
 
 	--max-width: 1110px;
+	--min-pad: 32px;
 	--stretch-margin: min(-2vw, calc(-1 * (100vw - var(--max-width)) / 2));
+}
+
+@media (max-width: 653px){
+	html{
+		--min-pad: 16px;
+	}
 }
 
 
