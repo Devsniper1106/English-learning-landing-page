@@ -1,8 +1,6 @@
 import styled from "styled-components";
 import Button from "../Button";
 
-const STYLES = {};
-
 const Footer = () => {
     return (
         <Wrapper>
