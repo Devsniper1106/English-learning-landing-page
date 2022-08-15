@@ -85,7 +85,6 @@ const Main = styled.main`
     @media (max-width: 653px) {
         margin-top: 10px;
     }
-    /* overflow-x: hidden; */
 `;
 
 const Attribution = styled.p`
