@@ -1,5 +1,6 @@
-const { default: styled } = require("styled-components");
+import { QUERIES } from "../../constants";
 
+const { default: styled } = require("styled-components");
 const getIconPath = (icon) => {
     if (icon === "animation") return "assets/images/icon-animation.svg";
     if (icon === "business") return "assets/images/icon-business.svg";
@@ -32,7 +33,7 @@ const Wrapper = styled.div`
     border-radius: 15px;
     background-color: var(--color-white);
 
-    @media (max-width: 768px) {
+    ${QUERIES.tabletAndDown} {
         padding: 28px;
         padding-top: 0px;
         padding-bottom: 32px;
@@ -51,7 +52,7 @@ const Title = styled.h2`
     font-size: calc(1rem * (24 / 16));
     line-height: calc(1rem * (30 / 16));
 
-    @media (max-width: 768px) {
+    ${QUERIES.tabletAndDown} {
         font-size: calc(1rem * (20 / 16));
         line-height: calc(1rem * (25 / 16));
     }
@@ -62,7 +63,7 @@ const Description = styled.p`
     line-height: calc(1rem * (28 / 16));
     color: var(--color-lightest-blue);
 
-    @media (max-width: 768px) {
+    ${QUERIES.tabletAndDown} {
         font-size: calc(1rem * (16 / 16));
         line-height: calc(1rem * (26 / 16));
     }

@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import { QUERIES } from "../constants";
 
 const GlobalStyles = createGlobalStyle`
 @font-face {
@@ -44,7 +45,7 @@ html{
 	--stretch-margin: min(-2vw, calc(-1 * (100vw - var(--max-width)) / 2));
 }
 
-@media (max-width: 653px){
+${QUERIES.phoneAndDown}{
 	html{
 		--min-pad: 16px;
 	}
