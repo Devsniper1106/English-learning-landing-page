@@ -41,40 +41,41 @@ const Attribution = styled.p`
 const TitleCard = styled.div`
     background: linear-gradient(180deg, #ff6f48 0%, #f02aa6 100%);
     border-radius: 15px;
+    color: white;
+    font-weight: 800;
+
     font-size: 32px;
     line-height: 40px;
-    font-weight: 800;
-    color: white;
     padding: 64px 32px;
 
     @media ${QUERIES.phoneAndDown} {
         font-size: 24px;
         line-height: 32px;
-        padding: 28px;
-        padding-top: 24px;
-        padding-bottom: 32px;
+        padding: 24px 28px 32px 28px;
     }
 `;
 
 const Wrapper = styled.div`
     background: linear-gradient(180deg, #ffffff 0%, #f0f1ff 100%);
-    flex-grow: 1;
+    padding-bottom: 16px;
+
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 16px;
-    max-width: 100%;
 `;
 
 const Categories = styled.div`
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    flex-wrap: wrap;
+    grid-template-columns: repeat(auto-fill, minmax(335px, 1fr));
+
     /* gap: 56px 30px; */
     padding: 140px var(--min-pad);
     max-width: min(100%, calc(var(--max-width) + var(--min-pad) * 2));
-    margin: auto;
-    gap: 64px 30px;
+    gap: 80px 30px;
+
+    @media ${QUERIES.tabletAndDown} {
+        gap: 56px 10px;
+    }
 
     @media ${QUERIES.phoneAndDown} {
         padding-top: 0px;
