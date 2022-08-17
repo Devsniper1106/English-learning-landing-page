@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { QUERIES } from "../../constants";
 
 const Button = ({ children, variant }) => {
     const bgColor =
@@ -19,13 +20,19 @@ const Button = ({ children, variant }) => {
 const Wrapper = styled.div`
     border-radius: 5000px;
     background: var(--bgColor);
-    border: none;
     color: var(--color-white);
-    padding: 8px 24px;
+    border: none;
+    padding: 14px 32px;
     font-weight: 700;
     line-height: 28px;
+    font-size: calc(1rem * (18 / 16));
     position: relative;
     overflow: hidden;
+
+    @media ${QUERIES.tabletAndDown} {
+        font-size: revert;
+        padding: 9px 24px 11px;
+    }
 `;
 
 const Overlay = styled.button`
