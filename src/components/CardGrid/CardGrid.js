@@ -66,7 +66,7 @@ const Wrapper = styled.div`
 
 const Categories = styled.div`
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(335px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
 
     /* gap: 56px 30px; */
     padding: 140px var(--min-pad);
