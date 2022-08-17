@@ -14,10 +14,12 @@ const Hero = () => {
                 </Description>
                 <Button variant="primary">Get Started</Button>
             </HeroCaption>
-            <Image
-                imgName="image-hero"
-                alt="Woman working on a course. Members: 29k, Course hours: 1,451"
-            />
+            <HeroImage>
+                <Image
+                    imgName="image-hero"
+                    alt="Woman working on a course. Members: 29k, Course hours: 1,451"
+                />
+            </HeroImage>
         </Wrapper>
     );
 };
@@ -28,21 +30,11 @@ const Wrapper = styled.div`
     width: 100%;
     margin: auto;
     display: flex;
+    margin-top: 40px;
 
     @media ${QUERIES.phoneAndDown} {
         flex-direction: column;
-    }
-`;
-
-const HeroCaption = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: center;
-    max-width: 500px;
-
-    @media ${QUERIES.phoneAndDown} {
-        max-width: auto;
+        margin-top: 10px;
     }
 `;
 
@@ -62,13 +54,45 @@ const Title = styled.h1`
 const Description = styled.p`
     font-weight: 500;
     color: var(--color-lightest-blue);
-    margin-bottom: 40px;
     line-height: calc(1rem * (28 / 16));
+    margin-bottom: 40px;
 
     @media ${QUERIES.tabletAndDown} {
         font-size: calc(1rem * (16 / 16));
         line-height: calc(1rem * (26 / 16));
         margin-bottom: 24px;
+    }
+`;
+
+const HeroCaption = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    flex-shrink: 1;
+
+    @media ${QUERIES.phoneAndDown} {
+        max-width: revert;
+    }
+`;
+
+const HeroImage = styled.div`
+    transform: scale(1.6) translateX(23%) translateY(-9%);
+    pointer-events: none;
+    height: 100%;
+    /* width: 50%; */
+    flex-shrink: 1.25;
+
+    @media ${QUERIES.tabletAndDown} {
+        transform: scale(2.3) translateX(20%);
+    }
+
+    @media ${QUERIES.phoneAndDown} {
+        transform: revert;
+        align-self: center;
+        width: 100%;
+        display: grid;
+        place-content: center;
     }
 `;
 

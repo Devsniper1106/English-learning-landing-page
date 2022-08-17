@@ -66,7 +66,6 @@ const Image = ({ alt, imgName }) => {
 };
 
 const Wrapper = styled.picture`
-    height: 100%;
     width: 100%;
 `;
 

@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { QUERIES } from "../../constants";
 import CardGrid from "../CardGrid";
 import Footer from "../Footer";
 import Header from "../Header";
@@ -18,14 +17,6 @@ function App() {
     );
 }
 
-const Main = styled.main`
-    display: flex;
-    flex-direction: column;
-    margin-top: 60px;
-    flex-grow: 1;
-    @media ${QUERIES.phoneAndDown} {
-        margin-top: 10px;
-    }
-`;
+const Main = styled.main``;
 
 export default App;
