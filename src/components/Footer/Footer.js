@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { QUERIES } from "../../constants";
 import Button from "../Button";
 
 const Footer = () => {
