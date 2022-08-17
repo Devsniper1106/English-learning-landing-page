@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { QUERIES } from "../../constants";
 import Button from "../Button";
 
 const Header = () => {
@@ -12,6 +13,10 @@ const Header = () => {
 
 const Logo = styled.img`
     object-fit: contain;
+
+    @media ${QUERIES.tabletAndDown} {
+        width: 89px;
+    }
 `;
 
 const Wrapper = styled.header`

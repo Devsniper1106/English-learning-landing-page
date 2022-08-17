@@ -14,6 +14,10 @@ const Footer = () => {
 
 const Logo = styled.img`
     object-fit: contain;
+
+    @media ${QUERIES.tabletAndDown} {
+        width: 89px;
+    }
 `;
 
 const Content = styled.div`
