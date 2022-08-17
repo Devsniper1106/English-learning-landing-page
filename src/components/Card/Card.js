@@ -16,35 +16,50 @@ const Card = ({ title, icon, description, link }) => {
     return (
         <Wrapper>
             <Icon src={iconPath} alt={title}></Icon>
-            <Title>{title}</Title>
-            <Description>{description}</Description>
-            <Link href={link}>Get Started</Link>
+            <Content>
+                <Title>{title}</Title>
+                <Description>{description}</Description>
+                <Link href={link}>Get Started</Link>
+            </Content>
         </Wrapper>
     );
 };
 
 const Wrapper = styled.div`
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    padding: 32px;
-    padding-top: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0px 32px 40px 32px;
     box-shadow: 0px 25px 50px rgba(6, 22, 141, 0.0442381);
     border-radius: 15px;
     background-color: var(--color-white);
 
     @media ${QUERIES.tabletAndDown} {
-        padding: 28px;
-        padding-top: 0px;
+        padding-left: 28px;
+        padding-right: 28px;
         padding-bottom: 32px;
+    }
+`;
+
+const Content = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    @media ${QUERIES.tabletAndDown} {
         gap: 16px;
     }
 `;
 
 const Icon = styled.img`
-    height: 56px;
-    width: 56px;
-    margin-top: -24px;
+    --side: 56px;
+    height: var(--side);
+    width: var(--side);
+    margin-top: calc(-1 * var(--side) / 2);
+    margin-bottom: 32px;
+
+    @media ${QUERIES.tabletAndDown} {
+        margin-bottom: 24px;
+    }
 `;
 
 const Title = styled.h2`

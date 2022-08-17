@@ -80,7 +80,6 @@ const HeroImage = styled.div`
     transform: scale(1.6) translateX(23%) translateY(-9%);
     pointer-events: none;
     height: 100%;
-    /* width: 50%; */
     flex-shrink: 1.25;
 
     @media ${QUERIES.tabletAndDown} {
