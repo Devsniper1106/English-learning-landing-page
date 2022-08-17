@@ -23,7 +23,7 @@ const Main = styled.main`
     flex-direction: column;
     margin-top: 60px;
     flex-grow: 1;
-    ${QUERIES.phoneAndDown} {
+    @media ${QUERIES.phoneAndDown} {
         margin-top: 10px;
     }
 `;

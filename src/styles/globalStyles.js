@@ -45,7 +45,7 @@ html{
 	--stretch-margin: min(-2vw, calc(-1 * (100vw - var(--max-width)) / 2));
 }
 
-${QUERIES.phoneAndDown}{
+@media ${QUERIES.phoneAndDown}{
 	html{
 		--min-pad: 16px;
 	}

@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { QUERIES } from "../../constants";
 import Button from "../Button";
+import Image from "../Image";
 
 const Hero = () => {
     return (
@@ -13,13 +14,9 @@ const Hero = () => {
                 </Description>
                 <Button variant="primary">Get Started</Button>
             </HeroCaption>
-            <HeroImage
-                alt="Hero Image Desktop"
-                src="/assets/images/image-hero-desktop.png"
-            />
-            <HeroImageMobile
-                alt="Hero Image Mobile"
-                src="/assets/images/image-hero-mobile.png"
+            <Image
+                imgName="image-hero"
+                alt="Woman working on a course. Members: 29k, Course hours: 1,451"
             />
         </Wrapper>
     );
@@ -32,30 +29,14 @@ const Wrapper = styled.div`
     margin-left: auto;
     margin-right: auto;
     display: flex;
-    ${QUERIES.phoneAndDown} {
+
+    @media ${QUERIES.phoneAndDown} {
         flex-direction: column;
     }
 `;
 
-const HeroImage = styled.img`
-    width: 80%;
-    position: absolute;
-    top: -100%;
-    right: -35%;
-    /* transform: scale(1.8) translate(calc(35%)); */
-    object-fit: contain;
-
-    ${QUERIES.phoneAndDown} {
-        display: none;
-    }
-`;
-
-const HeroImageMobile = styled.img`
-    display: none;
-
-    ${QUERIES.phoneAndDown} {
-        display: block;
-    }
+const HeroImageMobile = styled(Image)`
+    display: none !important;
 `;
 
 const HeroCaption = styled.div`
@@ -65,7 +46,7 @@ const HeroCaption = styled.div`
     justify-content: center;
     max-width: 500px;
 
-    ${QUERIES.phoneAndDown} {
+    @media ${QUERIES.phoneAndDown} {
         max-width: none;
     }
 `;
@@ -76,7 +57,7 @@ const Title = styled.h1`
     line-height: calc(1rem * (70 / 16));
     margin-bottom: 30px;
 
-    ${QUERIES.tabletAndDown} {
+    @media ${QUERIES.tabletAndDown} {
         font-size: calc(1rem * (40 / 16));
         line-height: calc(1rem * (50.4 / 16));
         margin-bottom: 25px;
@@ -89,7 +70,7 @@ const Description = styled.p`
     margin-bottom: 40px;
     line-height: calc(1rem * (28 / 16));
 
-    ${QUERIES.tabletAndDown} {
+    @media ${QUERIES.tabletAndDown} {
         font-size: calc(1rem * (16 / 16));
         line-height: calc(1rem * (26 / 16));
         margin-bottom: 24px;

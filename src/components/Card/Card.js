@@ -33,7 +33,7 @@ const Wrapper = styled.div`
     border-radius: 15px;
     background-color: var(--color-white);
 
-    ${QUERIES.tabletAndDown} {
+    @media ${QUERIES.tabletAndDown} {
         padding: 28px;
         padding-top: 0px;
         padding-bottom: 32px;
@@ -52,7 +52,7 @@ const Title = styled.h2`
     font-size: calc(1rem * (24 / 16));
     line-height: calc(1rem * (30 / 16));
 
-    ${QUERIES.tabletAndDown} {
+    @media ${QUERIES.tabletAndDown} {
         font-size: calc(1rem * (20 / 16));
         line-height: calc(1rem * (25 / 16));
     }
@@ -63,7 +63,7 @@ const Description = styled.p`
     line-height: calc(1rem * (28 / 16));
     color: var(--color-lightest-blue);
 
-    ${QUERIES.tabletAndDown} {
+    @media ${QUERIES.tabletAndDown} {
         font-size: calc(1rem * (16 / 16));
         line-height: calc(1rem * (26 / 16));
     }

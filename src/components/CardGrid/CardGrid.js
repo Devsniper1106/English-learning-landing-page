@@ -47,7 +47,7 @@ const TitleCard = styled.div`
     color: white;
     padding: 64px 32px;
 
-    ${QUERIES.phoneAndDown} {
+    @media ${QUERIES.phoneAndDown} {
         font-size: 24px;
         line-height: 32px;
         padding: 28px;
@@ -76,7 +76,7 @@ const Categories = styled.div`
     margin: auto;
     gap: 64px 30px;
 
-    ${QUERIES.phoneAndDown} {
+    @media ${QUERIES.phoneAndDown} {
         padding-top: 0px;
         padding-bottom: 86px;
         gap: 40px;

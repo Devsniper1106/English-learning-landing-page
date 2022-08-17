@@ -4,6 +4,6 @@ export const BREAKPOINTS = {
 };
 
 export const QUERIES = {
-    tabletAndDown: `@media(max-width: ${BREAKPOINTS.tablet / 16} rem)`,
-    phoneAndDown: `@media(max-width: ${BREAKPOINTS.phone / 16} rem)`,
+    tabletAndDown: `(max-width: ${BREAKPOINTS.tablet / 16}rem)`,
+    phoneAndDown: `(max-width: ${BREAKPOINTS.phone / 16}rem)`,
 };
