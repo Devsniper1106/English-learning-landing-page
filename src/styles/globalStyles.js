@@ -40,7 +40,7 @@ html{
 	--primary-gradient: linear-gradient(180deg, var(--color-orange) 0%, var(--color-pink) 100%);
 	--secondary-gradient: linear-gradient(180deg, var(--color-deep-blue) -54.32%, var(--color-pink) 100%);
 
-	--max-width: 1200px;
+	--max-width: 1100px;
 	--min-pad: 32px;
 	--stretch-margin: min(-2vw, calc(-1 * (100vw - var(--max-width)) / 2));
 }
