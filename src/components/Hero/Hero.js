@@ -23,20 +23,15 @@ const Hero = () => {
 };
 
 const Wrapper = styled.div`
-    position: relative;
     padding: 0 var(--min-pad);
-    width: calc(var(--max-width) + var(--min-pad) * 2);
-    margin-left: auto;
-    margin-right: auto;
+    max-width: calc(var(--max-width) + var(--min-pad) * 2);
+    width: 100%;
+    margin: auto;
     display: flex;
 
     @media ${QUERIES.phoneAndDown} {
         flex-direction: column;
     }
-`;
-
-const HeroImageMobile = styled(Image)`
-    display: none !important;
 `;
 
 const HeroCaption = styled.div`
@@ -47,7 +42,7 @@ const HeroCaption = styled.div`
     max-width: 500px;
 
     @media ${QUERIES.phoneAndDown} {
-        max-width: none;
+        max-width: auto;
     }
 `;
 
