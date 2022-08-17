@@ -36,6 +36,11 @@ const CardGrid = () => {
 const Attribution = styled.p`
     margin-top: auto;
     background-color: transparent;
+    padding: var(--min-pad);
+
+    @media ${QUERIES.phoneAndDown} {
+        font-size: calc(1rem * 14 / 18);
+    }
 `;
 
 const TitleCard = styled.div`
@@ -57,7 +62,6 @@ const TitleCard = styled.div`
 
 const Wrapper = styled.div`
     background: linear-gradient(180deg, #ffffff 0%, #f0f1ff 100%);
-    padding-bottom: 16px;
 
     display: flex;
     flex-direction: column;
@@ -72,6 +76,7 @@ const Categories = styled.div`
     /* gap: 56px 30px; */
     padding: 140px var(--min-pad);
     max-width: min(100%, calc(var(--max-width) + var(--min-pad) * 2));
+    margin: auto;
     gap: 80px 30px;
 
     @media ${QUERIES.tabletAndDown} {
