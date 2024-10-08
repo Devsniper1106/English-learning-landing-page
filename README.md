@@ -72,7 +72,5 @@ I am always looking for feedback on how to improve~
 - [Changing Image src based on window size](https://stackoverflow.com/questions/30460681/changing-image-src-depending-on-screen-size) - This helped me avoid using multiple `img` tags. At first, I was using `display:none` and `display:block` based on the media queries. This helped me simplify things. 
 
 ## Author
+@AndyBlake1106@gmail.com
 
-- LinkedIn - [P Pawan Bhandarkar](https://www.linkedin.com/in/bhandarkar/)
-- Frontend Mentor - [@BhandarkarPawan](https://www.frontendmentor.io/profile/BhandarkarPawan)
-- Twitter - [@BhandarkarPawan](https://twitter.com/BhandarkarPawan)
