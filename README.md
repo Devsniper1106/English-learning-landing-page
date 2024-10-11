@@ -21,7 +21,7 @@ This is a solution to the [Skilled e-learning landing page challenge on Frontend
 
 ## Overview
 
-My goal in this project was to practice the CSS I had recently leanred in an online course, in the context of  React and Styled Components. This felt like a logical next step from my [last project](https://github.com/BhandarkarPawan/product-preview-card-component), which was built purely using HTML and CSS. 
+My goal in this project was to practice the CSS I had recently leanred in an online course, in the context of  React and Styled Components. 
 
 ### The challenge
 
